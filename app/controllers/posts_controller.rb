@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+  def show
+    @post = Post.find(params[:id])
+  end
 
   def create
     # phương thức current_user trả về đói tượng người dùng đang đăng nhập
